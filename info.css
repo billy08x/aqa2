@@ -1,0 +1,76 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#blog {
+    color: #e0e0e0;
+}
+
+body {
+    background-color: rgb(12, 12, 12);
+}
+
+.infsection {
+    margin-left: 20px;
+    margin-top: 10px;
+    max-width: 200rem;
+}
+
+.sectheader {
+    font-size: 33px;
+}
+
+.subsect {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.subsectheader {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.sectparagraph {
+  width: 100%;
+  max-width: 800px;
+  white-space: normal;
+  overflow-wrap: break-word;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+ol, ul {
+    margin-left: 30px;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    padding: 7px 7px 7px 7px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.compimg {
+    width: 100px;
+}
+
+.dispimg {
+    max-width: 400px;
+    display: block;
+    margin: 10px 0px 10px 0px;
+    border-radius: 10px;
+}
+
+.formuladisp {
+    max-width: 120px;
+    display: block;
+    margin: 10px 0px 10px 0px;
+}
+
+@media (max-width: 768px) {
+    .dispimg {
+        max-width: 300px;
+    }
+    
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AQA2 - Information</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="info.css">
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+
+        <nav class="navbar">
+            <div class="left">
+                AQA2
+                <img src="images/cdv7.png" class="navbardisp">
+                <img src="images/kk.png" class="navbardisp">
+                <img src="images/id.png" class="navbardisp">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a>More info</a></li>
+            </ul>
+        </nav>
+
+        <main id="blog">
+
+            <div class="infsection" id="toc">
+                <h1 class="sectheader">Table of contents</h1>
+                <ol class="toclinks">
+                    <li><a href="#manual">FAQ & details</a></li>
+                    <li><a href="#components">Components used & pricing</a></li>
+                    <li><a href="#3dcase">3D case model</a></li>
+                    <li><a href="#dev">Development process/timeline</a></li>
+                </ol>
+            </div>
+
+            <div class="infsection" id="manual">
+                <h1 class="sectheader">1. FAQ & details</h1>
+                <div class="subsect">
+                    <h2 class="subsectheader">I. Meaning of the side indicator</h1>
+                    <img src="images/sidebar.jpg" class="dispimg">
+                    <p class="sectparagraph">The side indicator indicates how good the air quality is using 8 LEDS. It starts from left to right. All 8 LEDS on means the air quality is super healthy, but if only 1 LED lights up, it means the air quality is hazardous.</p>
+                </div>
+                <div class="subsect">
+                    <h2 class="subsectheader">II. Software & navigation</h1>
+                    <img src="images/swov.png" class="dispimg">
+                    <p class="sectparagraph">To navigate, you must first press the space button after running the software. Then to move to other pages, you use arrow keys to navigate. The software does not support mouse clicking.</p>
+                </div>
+                <div class="subsect">
+                    <h2 class="subsectheader">III. How health issue is determined</h1>
+                    <p class="sectparagraph">Health risk, for a specific factor of air quality is a value from 0-1, calculated by substracting the sensors reading by the amount where health risk is 0, then divided by the number where health risk is significant enough to cause health issues.</p>
+                    <img src="images/hrformula.png" class="formuladisp">
+                    <p class="sectparagraph">Where H is the individual health risk and ranged from 0-1, x is the sensor reading, s is the reading value where air quality remains safe and m is the value sustracted by s where health risk is guranteed.</p>
+                    <img src="images/hrformulaex.png" class="formuladisp">
+                    <p class="sectparagraph">Example is the health risk formula for Temperature where T is the temperature, 25 is the temperature where air quality remains safe, and 10 is the value substracted by 25 where health risk is guranteed. Therefore, 25 degrees mean health risk is 0 and 35 (s + m, 25 + 10) mean health risk is 1 (maximum).</p>
+                    <p class="sectparagraph">Every factor (temperature, humidity, gas quality and dust particles) are calculated through the formula above then weighted (0.2 for temperature and humidity, 0.3 for gas quality and air particles). to get the overall final health risk value (still ranged 0-1). The health issue is then provided based on the final health risk.</p>
+                    <p class="sectparagraph">Above is how the overall health risk is determined. The next health risks are determined just based on the sensor readings. Example: Temperature > 32 can cause dehydration. The solutions are also determined just based on the sensor readings.</p>
+                </div>
+            </div>
+
+            <div class="infsection" id="components">
+                <h1 class="sectheader">2. Components used & pricing</h1>
+                <ul>
+                    <table>
+                        <tr>
+                            <th>Component</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>Arduino uno</td>
+                            <td>Main board</td>
+                            <td><img src="images/uno.png" class="compimg"></td>
+                            <td>RP. 57,500</td>
+                        </tr>
+                        <tr>
+                            <td>MQ135</td>
+                            <td>Harmful gas detector</td>
+                            <td><img src="images/mq135.png" class="compimg"></td>
+                            <td>RP. 17,500</td>
+                        </tr>
+                        <tr>
+                            <td>DHT11</td>
+                            <td>Humidity and temperature sensor</td>
+                            <td><img src="images/dht.png" class="compimg"></td>
+                            <td>RP. 11,000</td>
+                        </tr>
+                        <tr>
+                            <td>gp2y1010au0f</td>
+                            <td>Dust particle sensor (PM2.5)</td>
+                            <td><img src="images/dust.png" class="compimg"></td>
+                            <td>RP. 55,000</td>
+                        </tr>
+                        <tr>
+                            <td>128*64 OLED display</td>
+                            <td>Displays values</td>
+                            <td><img src="images/oled.png" class="compimg"></td>
+                            <td>Rp. 28,400</td>
+                        </tr>
+                        <tr>
+                            <td>3D printed case</td>
+                            <td>Encases all components</td>
+                            <td><img src="images/3d2.png" class="compimg"></td>
+                            <td>RP. 100,000</td>
+                        </tr>
+                        <tr>
+                            <td>Others</td>
+                            <td>Such as cables, resistors, bluetooth module, etc</td>
+                            <td>-</td>
+                            <td>RP. 113,700</td>
+                        </tr>
+                    </table>
+                    <p class="sectparagraph">All the components used total up to <span style="text-decoration: underline;">RP. 383,100</span> without the price of delivery and tools used considered.</p>
+                    <p class="sectparagraph">Note: Price my vary based on the shop you buy and/or the promotions or discounts available.</p>
+
+                </ul>
+            </div>
+
+            <div class="infsection" id="3dcase">
+                <h1 class="sectheader">3. 3D case model</h1>
+                <img src="images/3d0.png" class="dispimg">
+                <img src="images/3d1.png" class="dispimg">
+                <img src="images/3d2.png" class="dispimg">
+                <p>These are 3d renders of the AQA2's outer case designed with autodesk fusion 360 pro.</p>
+            </div>
+
+            <div class="infsection" id="dev">
+                <h1 class="sectheader">4. Development process/timeline</h1>
+                <div class="subsect">
+                    <h2 class="subsectheader">Beginnings</h1>
+                    <img src="images/cleanplanet.png" class="dispimg">
+                    <p class="sectparagraph">Around september of 2025 was when i heard of codeavour 7.0. I heard about the prizes and how interesting it was so i decided i would registered for it. I did wish i registered as a group with other people however, most of the people i knew werent really keen on joining, so i decided to join by myself.</p>
+                    <p class="sectparagraph">I decided to choose the topic of clean planet, healthy people as i believe that having a clean planet with healthy people is currently the most important thing to have, as they are major factors determining the future of mankind.</p>
+                </div>
+                <div class="subsect">
+                    <h2 class="subsectheader">Endless ideas</h1>
+                    <p class="sectparagraph">The topic of clean planet, healthy people is very broad, meaning there are a lot of options of what i could make.</p>
+                    <p class="sectparagraph">The first thing that came to my mind when hearing "clean planet, healthy people" was to create a device that could pick up trash from the ocean, but after a lot of thinking, i didnt feel like it would make a very big impact, unless it was a very large scale project.</p>
+                    <p class="sectparagraph">Another thing i thought of was to create a mask that filters out all air pollutants, possibly also monitoring the air quality (similar to <span class="aqa2">AQA2</span>), but i thought it would be too bulky and not really comfortable to use.</p>
+                    <p class="sectparagraph">Finally, the idea of an air quality monitor came up to my mind. I thought of just creating a simple common one however, thats when i realised it wouldnt make that big of an impact as people may not be educated about what the monitor readings are.</p>
+                    <p class="sectparagraph">So that is where i came up with the idea of adding a health issue predictor along with a solutions provider to ensure people know what the readings mean, and what actions to take to improve their air quality.</p>
+                </div>
+                <div class="subsect">
+                    <h2 class="subsectheader">Hardware assembly</h1>
+                    <img src="images/oldhw.png" class="dispimg">
+                    <p class="sectparagraph">December 2025 was when i started to purchase the hardware for the project. The components i listed above in section 1 were the one i purchased, along with other things such as jumper cables, resistors, capacitors and much more to connect these components together.</p>
+                    <p class="sectparagraph">It did take a while for the components to arrive but i recieved it around christmas 2025. That was when i got started working with the hardware. it took me about 2-3 days to complete connecting the components, working about 2-3 hours a day. I finished a lot faster than expected which gave me a huge advantage as i had time to create the software for it.</p>
+                </div>
+                <div class="subsect">
+                    <h2 class="subsectheader">Software and UI</h1>
+                    <img src="images/aqasw.jpg" class="dispimg">
+                    <p class="sectparagraph">Early 2026 was when i got started with making my software. I decided to use python for pictobloxes code as it allows for more flexibility compared to blocks, and made it easier to perform somewhat complex calculations.</p>
+                    <p class="sectparagraph">For the UI, i initially wanted to use pictobloxes deisgner but i found it too simple and too limited, so i decided to use canva instead to design my UI, as it allowed for more complex shapes along with better looking elements.</p>
+                    <p class="sectparagraph">If i had to mention my biggest struggle, i would say that making the software was the hardest due to pictobloxes limits. I wanted to display text with a fancy font and color but i couldnt do that as i could only display text in a way which sprites talk, which i find to be a little silly. I dont know if i missed the option for displaying text but i did research and could not find anything.</p>
+                </div>
+                <div class="subsect">
+                    <h2 class="subsectheader">Elimination round</h1>
+                    <img src="images/aqa1.jpg" class="dispimg">
+                    <p class="sectparagraph">March 2026 was the submission deadline for the project. This was how my final device looks. Looking back at it, i found it to look really messy and cheap as every component was exposed, only using cardboard was its base. It was fragile and i feel like it would break super easily if i wasnt the one handling it.</p>
+                    <p class="sectparagraph">Surprisingly though, i had passed the elimination round AND the regional round as well, likely due to my projects concept instead of design.</p>
+                    <p class="sectparagraph">Fun fact: I added a simulation mode to the software meaning you can kind of use the software without even having the hardware. Ofcourse, the readings will just be random values but it allows people to get an image of how it would work if they owned the device.</p>
+                </div>
+                <div class="subsect">
+                    <h2 class="subsectheader">The final upgrade</h1>
+                    <img src="images/aqa2.jpg" class="dispimg">
+                    <p class="sectparagraph">As i passed regionals, i had the opportunity to upgrade my project. I considered adding a display directly on the device so that you can measure air quality independant of the software (good for situations where you cannot bring your laptop).</p>
+                    <p class="sectparagraph">Along with a display, i also added a led strip indicator to indicate how well the air quality is. I added this to improve accessibility as some people may not be able to read the tiny display due to visual impairments.</p>
+                    <p class="sectparagraph">Furthermore, i decided to encase everything in a 3D printed case to significantly improve how it looks like and to ensure it is robust.</p>
+                    <p class="sectparagraph">Lastly, i also upgraded the software by improving its health prediction system and also the solutions provider. I also ensure that values displayed in the software were more accurate.</p>
+                    <p class="sectparagraph">This is the upgraded version of the project and it is now called <span class="aqa2">AQA2</span>, standing for air quality analyzer V2.</p>
+                </div>
+            </div>
+
+        </main>
+
+        <footer>
+            <p>Website coded by: Billy Prajna Sofian, Hosted by github, for codeavour 7.0 international.</p>
+        </footer>
+
+    </body>
+</html>
