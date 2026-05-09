@@ -22,7 +22,7 @@ body {
     color: rgb(0, 255, 201);
 }
 
-.toclinks a, .dll:hover {
+.toclinks a:hover, .dll:hover {
     color: rgb(255, 201, 0);
 }
 
