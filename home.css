@@ -18,11 +18,19 @@ body {
     background: linear-gradient(rgba(12, 12, 12, 1), rgba(12, 12, 12, 0.9)), url('images/aqa2bgr.png') no-repeat center center/cover;
 }
 
-.toclinks a, .dll {
+.toclinks a {
+    color: rgb(0, 255, 201);
+} 
+
+.dll {
     color: rgb(0, 255, 201);
 }
 
-.toclinks a:hover, .dll:hover {
+.toclinks a:hover {
+    color: rgb(255, 201, 0);
+}
+
+.dll:hover {
     color: rgb(255, 201, 0);
 }
 
