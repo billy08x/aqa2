@@ -10,6 +10,14 @@ body {
     background-color: rgb(12, 12, 12);
 }
 
+.toclinks a {
+    color: rgb(0, 255, 201);
+} 
+
+.toclinks a:hover {
+    color: rgb(255, 201, 0);
+}
+
 .infsection {
     margin-left: 20px;
     margin-top: 10px;
